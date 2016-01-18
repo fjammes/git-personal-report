@@ -56,6 +56,6 @@ func main() {
 		go run_repo(wg, repo_url)
 	}
 	wg.Wait()
-	cmd_str := "cat /tmp/gitreport/stats-* | sort | less"
+	cmd_str := "cat /tmp/gitreport/stats-* | sort > /tmp/gitreport/full-stat.txt"
 	run_cmd(cmd_str)
 }
